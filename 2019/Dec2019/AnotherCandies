@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class AnotherCandies
+{
+	public static void main(String[] args) throws Exception
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int n = Integer.parseInt(br.readLine());
+		while(n-- > 0)
+		{
+			br.readLine();
+			int numChildren = Integer.parseInt(br.readLine());
+			int counter = 0;
+			while(numChildren-- > 0)
+			{
+				counter += Integer.parseInt(br.readLine());
+			}
+			
+			if(counter % numChildren == 0)
+			{
+				bw.write("YES\n");
+			}
+			else
+			{
+				bw.write("NO\n");
+			}
+		}
+		
+		br.close();
+		bw.close();
+	}
+}
